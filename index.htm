@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<title>Sankey Diagram</title>
+<style>
+#paraSet .node rect {
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+#paraSet .node text {
+  pointer-events: none;
+  /*
+  font-size: 10px;
+  */
+}
+
+#paraSet .link {
+  stroke: #000;
+  stroke-opacity: .05;
+  fill: #000;
+  fill-opacity: .2;
+}
+
+#paraSet .link:hover {
+  fill-opacity: .5;
+}
+
+#paraSet .chartHead {
+    position: relative; margin: 0; margin-left: 0px; padding: 0;
+    /*background-color: #888; display:inline-block;*/
+    overflow: hidden;
+}
+#paraSet .chartHead > div {float: left;}
+#paraSet .chartHead div {
+  border: 1px solid black;
+  background-color: #ddd;
+  margin: 0 205px 3px 18px; /*need to change*/ 
+  padding: 0.4em;
+  font-size: 1.4em;
+  height: 18px;
+  cursor: move;
+}
+#paraSet .chartHead .sortable-placeholder {
+  opacity: 0;
+}
+</style>
+
+</head><body>
+
+<div id = "paraSet">
+  <!--
+  <div class="chartHead"> </div>
+  <div id="chart"> </div>
+  -->
+</div>
+
+<script src="js/d3.js"></script>
+<script src="js/sankey.js"></script>
+<script src="js/jquery-1.7.1.js"></script>
+<script src="js/jquery-ui.1.9.1.min.js"></script>
+<script src="js/underscore.js"></script>
+
+<script src="js/paraset.js"></script>
+
+<script>
+var para = new ParaSet($("#paraSet"));
+para.startAnim();
+</script></body></html>
